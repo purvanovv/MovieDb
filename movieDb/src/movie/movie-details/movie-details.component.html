@@ -1,0 +1,21 @@
+<div class="movie-details" *ngIf="movieDetails != null">
+    <div class="row movie-backdrop" [ngStyle]="{'background-image': getUrl()}">
+        <div class="col-3 movie-details-image">
+            <img src="{{ movieDetails.poster_path }} " alt="Card image cap">
+        </div>
+        <div class="col-6 movie-detils-card-body">
+            <div class="movie-detils-card-top">
+                <h1>{{movieDetails.title}}</h1>
+                <h3>({{movieDetails.release_date}})</h3>
+                <div>
+                    <span *ngFor="let number of [1,2,3,4,5]" [ngClass]="{'checked': isChecked(number)}" class="fa fa-star fa-lg"></span>
+                    <span class="rate-points">({{movieDetails.vote_average}}/10.0)</span>
+                </div>
+            </div>
+            <div class="movie-detils-card-mid">
+                <h4>Overview</h4>
+                <p>{{movieDetails.overview}}</p>
+            </div>
+        </div>
+    </div>
+</div>
