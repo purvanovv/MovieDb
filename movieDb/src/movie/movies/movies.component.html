@@ -3,7 +3,7 @@
         <h1>{{typeTitle}}</h1>
     </div>
     <div class="card-columns">
-        <div *ngFor="let movie of movies | async" class="card" style="width: 23rem; height: 50rem;">
+        <div *ngFor="let movie of movies | async" class="card" style="width: 23rem; height: 45rem;">
             <img (click)="movieDetails(movie.id)" class="card-img-top" src="{{ movie.poster_path }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{movie.title}}</h5>
