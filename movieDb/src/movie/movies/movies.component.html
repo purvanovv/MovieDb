@@ -4,14 +4,12 @@
     </div>
     <div class="card-columns">
         <div *ngFor="let movie of movies | async" class="card" style="width: 23rem; height: 50rem;">
-            <img class="card-img-top" src="{{ movie.poster_path }}" alt="Card image cap">
+            <img (click)="movieDetails(movie.id)" class="card-img-top" src="{{ movie.poster_path }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{movie.title}}</h5>
                 <p class="card-text">
                     {{movie.overview}}
                 </p>
-                <a href="/app/movie-details/{{movie.id}}" class="btn btn-primary"
-                    routerLink="/app/movie-details/">More Info</a>
             </div>
         </div>
     </div>
