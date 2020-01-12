@@ -6,3 +6,24 @@
     column-count: 5;
   }
 }
+
+.pagination{
+  margin-left: 35%
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #081c24;
+  color: #01d277;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
