@@ -1,5 +1,8 @@
 <div class="movie-details" *ngIf="movieDetails != null">
-    <div class="row movie-backdrop" [ngStyle]="{'background-image': getUrl()}">
+    <div class="background" [ngStyle]="{'background-image': getUrl()}">
+
+    </div>
+    <div class="row movie-backdrop">
         <div class="col-3 movie-details-image">
             <img src="{{ movieDetails.poster_path }} " alt="Card image cap">
         </div>
